@@ -70,8 +70,13 @@ const loginUser = async (req, res) => {
       return res.send({ status: false, messege: "something went wrong" });
     }
   };
-
+ const getUser = async(req,res)=>{
+  let users  = await UserModel.find()
+  console.log(users);
+  return res.send(users)
+ }
   module.exports={
     loginUser,
     signupUser,
+    getUser
   }
