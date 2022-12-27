@@ -72,7 +72,6 @@ const loginUser = async (req, res) => {
   };
  const getUser = async(req,res)=>{
   let users  = await UserModel.find()
-  console.log(users);
   return res.send(users)
  }
   module.exports={
